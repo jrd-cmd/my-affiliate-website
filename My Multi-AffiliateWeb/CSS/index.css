@@ -1,0 +1,24 @@
+/* ===== HOMEPAGE STYLES ===== */
+/* 1. Design tokens */
+:root{--ink:#1b1f2a;--paper:#f3f5f7;--muted:#5d6577;--line:#dde1e8;--font:"Bricolage Grotesque",system-ui,sans-serif}
+/* 2. Reset and page base */
+*{box-sizing:border-box;margin:0}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);line-height:1.6}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+/* 3. Top bar */
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:1rem clamp(1rem,5vw,4rem)}
+.logo{font-weight:800;color:var(--ink);text-decoration:none}
+.topbar nav a{color:var(--ink);font-weight:600}
+/* 4. Hero */
+.hero{padding:clamp(3rem,10vw,8rem) clamp(1rem,5vw,4rem) 3rem}
+.hero h1{font-size:clamp(2.8rem,9vw,7rem);font-weight:800;line-height:.98;max-width:11ch}
+.hero p{margin-top:1.25rem;font-size:1.2rem;color:var(--muted);max-width:42ch}
+/* 5. Marketplace tiles: each uses its store's color */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;padding:0 clamp(1rem,5vw,4rem) 4rem}
+.tile{display:flex;flex-direction:column;justify-content:flex-end;min-height:220px;padding:1.5rem;border-radius:16px;text-decoration:none;color:#fff;background:var(--c)}
+.tile h2{font-size:1.8rem}
+.tile:hover{transform:translateY(-4px)}
+.amazon{--c:#FF9900;color:var(--ink)}.tiktok{--c:#FE2C55}.shopee{--c:#EE4D2D}.lazada{--c:#0F146D}
+@media (prefers-reduced-motion:reduce){.tile:hover{transform:none}}
+/* 6. Footer */
+footer{padding:2rem clamp(1rem,5vw,4rem);color:var(--muted);font-size:.9rem}

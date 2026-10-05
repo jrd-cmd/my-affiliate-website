@@ -1,0 +1,26 @@
+/* ===== Amazon PAGE STYLES ===== */
+/* 1. Design tokens: change colors and font here */
+:root{--brand:#FF9900;--on-brand:#1b1f2a;--ink:#1b1f2a;--paper:#f3f5f7;--muted:#5d6577;--line:#dde1e8;--font:"Bricolage Grotesque",system-ui,sans-serif}
+/* 2. Reset and page base */
+*{box-sizing:border-box;margin:0}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);line-height:1.6}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+/* 3. Top bar */
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:1rem clamp(1rem,5vw,4rem);border-bottom:1px solid var(--line)}
+.logo{font-weight:800;color:var(--ink);text-decoration:none}
+.topbar nav a{color:var(--muted);text-decoration:none}
+/* 4. Hero banner in the store's brand color */
+.hero{background:var(--brand);color:var(--on-brand);padding:clamp(2.5rem,8vw,6rem) clamp(1rem,5vw,4rem)}
+.hero h1{font-size:clamp(2.4rem,7vw,5rem);font-weight:800;line-height:1.02;max-width:12ch}
+.hero p{margin-top:1rem;font-size:1.2rem;max-width:45ch}
+/* 5. Product grid and cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.5rem;padding:3rem clamp(1rem,5vw,4rem)}
+.product{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.thumb{aspect-ratio:4/3;background:#e4e8ee}
+.product img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.product h2{font-size:1.1rem;padding:1rem 1rem 0}
+.product p{flex:1;padding:.25rem 1rem;color:var(--muted)}
+.buy{margin:1rem;padding:.7rem;text-align:center;background:var(--ink);color:#fff;border-radius:8px;text-decoration:none;font-weight:600}
+.buy:hover{background:var(--brand);color:var(--on-brand)}
+/* 6. Footer */
+footer{padding:2rem clamp(1rem,5vw,4rem);color:var(--muted);font-size:.9rem}
